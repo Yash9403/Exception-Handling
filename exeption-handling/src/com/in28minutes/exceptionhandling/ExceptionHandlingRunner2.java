@@ -16,12 +16,22 @@ public class ExceptionHandlingRunner2 {
 	public static void main2()
 	{
 		try {
-		String str = null;
-		str.length();
+//		String str = null;
+//		str.length();
+		int[] i = {1,2};
+		int number = i[3];
 		System.out.println("Main 2 ended");
 		}
-		catch(Exception ex) {
-//			ex.printStackTrace();
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			e.printStackTrace();
+		}
+		catch(NullPointerException ex) {
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
 		}
 	}
 }
